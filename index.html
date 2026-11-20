@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b1020">
+<meta name="description" content="LINKORA STORE - اكتشف وحمّل تطبيقاتنا الرسمية">
+<title>LINKORA STORE | متجر التطبيقات</title>
+
+<style>
+:root {
+  --bg:#0b1020;
+  --panel:#151e32;
+  --panel2:#1c2940;
+  --green:#39df9b;
+  --blue:#568cff;
+  --text:#f5f7ff;
+  --muted:#a9b5ca;
+}
+* {box-sizing:border-box}
+body {
+  margin:0;
+  font-family:Arial,Tahoma,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+header {
+  padding:18px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid #26334a;
+  position:sticky;
+  top:0;
+  background:#0b1020f2;
+  z-index:10;
+}
+.logo {
+  font-size:24px;
+  font-weight:900;
+  color:var(--green);
+}
+button {
+  border:0;
+  cursor:pointer;
+  font-weight:bold;
+}
+.lang {
+  background:var(--panel2);
+  color:white;
+  padding:11px 16px;
+  border-radius:12px;
+}
+.hero {
+  padding:65px 6% 45px;
+  text-align:center;
+  background:radial-gradient(ellipse at top,#1c3851,#0b1020 70%);
+}
+.hero h1 {
+  font-size:clamp(32px,7vw,55px);
+  margin:10px 0;
+}
+.hero h1 span {color:var(--green)}
+.hero p {
+  color:var(--muted);
+  line-height:1.9;
+  font-size:17px;
+}
+.tag {
+  color:var(--green);
+  font-size:13px;
+  letter-spacing:2px;
+}
+.container {
+  width:90%;
+  max-width:1050px;
+  margin:auto;
+}
+.section-title {
+  margin:35px 0 20px;
+  font-size:25px;
+}
+.apps {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+}
+.app {
+  background:var(--panel);
+  border:1px solid #263650;
+  border-radius:20px;
+  padding:23px;
+  transition:.25s;
+}
+.app:hover {
+  transform:translateY(-5px);
+  border-color:var(--green);
+}
+.app-icon {
+  width:65px;
+  height:65px;
+  border-radius:18px;
+  display:grid;
+  place-items:center;
+  font-size:30px;
+  background:linear-gradient(135deg,#315b91,#172b48);
+}
+.app h3 {font-size:22px;margin:18px 0 8px}
+.app p {
+  color:var(--muted);
+  line-height:1.8;
+  min-height:55px;
+}
+.download {
+  display:block;
+  text-align:center;
+  text-decoration:none;
+  background:linear-gradient(90deg,#19bd83,#39df9b);
+  color:#061b17;
+  padding:14px;
+  border-radius:12px;
+  margin-top:18px;
+  font-weight:bold;
+}
+.download.disabled {
+  background:#354258;
+  color:#c1cad9;
+}
+.ad {
+  margin:35px 0;
+  min-height:100px;
+  border:1px dashed #53627b;
+  border-radius:16px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:var(--muted);
+  padding:20px;
+}
+.features {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:15px;
+  margin:25px 0 45px;
+}
+.feature {
+  background:var(--panel);
+  border-radius:15px;
+  padding:20px;
+  text-align:center;
+}
+.feature strong {
+  display:block;
+  color:var(--green);
+  margin-bottom:10px;
+  font-size:18px;
+}
+footer {
+  text-align:center;
+  padding:35px 15px;
+  color:var(--muted);
+  border-top:1px solid #26334a;
+  line-height:2;
+}
+footer a {color:var(--green);text-decoration:none}
+[dir="ltr"] {text-align:left}
+[dir="ltr"] header {direction:ltr}
+@media(max-width:500px) {
+  header {padding:15px 5%}
+  .logo {font-size:19px}
+  .hero {padding-top:45px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">LINKORA STORE</div>
+  <button class="lang" onclick="toggleLanguage()" id="langBtn">
+    English
+  </button>
+</header>
+
+<section class="hero">
+  <div class="tag">YOUR APPS. YOUR WORLD.</div>
+  <h1 id="heroTitle">عالم تطبيقاتك <span>يبدأ هنا</span></h1>
+  <p id="heroDesc">
+    اكتشف تطبيقاتنا الرسمية وحمّلها بسهولة وأمان.
+    وجهتك الرقمية في مكان واحد.
+  </p>
+</section>
+
+<main class="container">
+
+  <h2 class="section-title" id="appsTitle">تطبيقاتنا الرسمية</h2>
+
+  <div class="apps">
+
+    <article class="app">
+      <div class="app-icon">🌐</div>
+      <h3>LINKORA</h3>
+      <p id="linkoraDesc">
+        متصفح إنترنت بتجربة استخدام سهلة وسريعة.
+      </p>
+      <a class="download disabled"
+         href="#"
+         onclick="return false"
+         id="linkoraBtn">
+         قريباً
+      </a>
+    </article>
+
+    <article class="app">
+      <div class="app-icon">🎬</div>
+      <h3>MEDIA GO</h3>
+      <p id="mediaDesc">
+        عالم الوسائط والفيديوهات في تطبيق واحد.
+      </p>
+      <a class="download disabled"
+         href="#"
+         onclick="return false"
+         id="mediaBtn">
+         قريباً
+      </a>
+    </article>
+
+  </div>
+
+  <div class="ad" id="adText">
+    مساحة إعلانية — سيتم تفعيل الإعلانات بعد الموافقة
+  </div>
+
+  <h2 class="section-title" id="featuresTitle">
+    لماذا LINKORA STORE؟
+  </h2>
+
+  <div class="features">
+    <div class="feature">
+      <strong id="f1">سهولة الاستخدام</strong>
+      <span id="f1d">واجهة بسيطة وواضحة</span>
+    </div>
+    <div class="feature">
+      <strong id="f2">تحديثات مستمرة</strong>
+      <span id="f2d">إصدارات جديدة لتطبيقاتنا</span>
+    </div>
+    <div class="feature">
+      <strong id="f3">مصدر رسمي</strong>
+      <span id="f3d">ملفات وروابط تطبيقاتنا</span>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <strong>LINKORA STORE</strong>
+  <div id="footerText">جميع الحقوق محفوظة © 2026</div>
+  <a href="mailto:contact@linkorastore.com"
+     id="contactLink">تواصل معنا</a>
+</footer>
+
+<script>
+let english = false;
+
+function toggleLanguage() {
+  english = !english;
+
+  const t = english ? {
+    dir:"ltr",
+    btn:"العربية",
+    title:'Your Apps <span>Start Here</span>',
+    desc:"Discover our official apps and download them easily.",
+    apps:"Our Official Apps",
+    ld:"A simple and fast internet browsing experience.",
+    md:"Your world of videos and media in one app.",
+    soon:"Coming Soon",
+    ad:"Advertising space — ads will be enabled after approval",
+    ft:"Why LINKORA STORE?",
+    f1:"Easy to use",f1d:"A simple and clear interface",
+    f2:"Regular updates",f2d:"New versions of our apps",
+    f3:"Official source",f3d:"Our official app downloads",
+    foot:"All rights reserved © 2026",
+    contact:"Contact us"
+  } : {
+    dir:"rtl",
+    btn:"English",
+    title:'عالم تطبيقاتك <span>يبدأ هنا</span>',
+    desc:"اكتشف تطبيقاتنا الرسمية وحمّلها بسهولة وأمان. وجهتك الرقمية في مكان واحد.",
+    apps:"تطبيقاتنا الرسمية",
+    ld:"متصفح إنترنت بتجربة استخدام سهلة وسريعة.",
+    md:"عالم الوسائط والفيديوهات في تطبيق واحد.",
+    soon:"قريباً",
+    ad:"مساحة إعلانية — سيتم تفعيل الإعلانات بعد الموافقة",
+    ft:"لماذا LINKORA STORE؟",
+    f1:"سهولة الاستخدام",f1d:"واجهة بسيطة وواضحة",
+    f2:"تحديثات مستمرة",f2d:"إصدارات جديدة لتطبيقاتنا",
+    f3:"مصدر رسمي",f3d:"ملفات وروابط تطبيقاتنا",
+    foot:"جميع الحقوق محفوظة © 2026",
+    contact:"تواصل معنا"
+  };
+
+  document.documentElement.lang = english ? "en" : "ar";
+  document.documentElement.dir = t.dir;
+
+  const set = (id,value) =>
+    document.getElementById(id).innerHTML = value;
+
+  set("langBtn",t.btn);
+  set("heroTitle",t.title);
+  set("heroDesc",t.desc);
+  set("appsTitle",t.apps);
+  set("linkoraDesc",t.ld);
+  set("mediaDesc",t.md);
+  set("linkoraBtn",t.soon);
+  set("mediaBtn",t.soon);
+  set("adText",t.ad);
+  set("featuresTitle",t.ft);
+  set("f1",t.f1);set("f1d",t.f1d);
+  set("f2",t.f2);set("f2d",t.f2d);
+  set("f3",t.f3);set("f3d",t.f3d);
+  set("footerText",t.foot);
+  set("contactLink",t.contact);
+}
+</script>
+
+</body>
+</html>
